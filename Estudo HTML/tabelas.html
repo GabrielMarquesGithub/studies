@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html>
+	
+	<head>
+		<title>Tabela</title>
+		<meta charset="utf-8">
+
+	</head>
+
+	<body>
+
+		<a href="contato.html">Contato</a>
+		<a href="tabelas.html">Tabela</a>
+		<a href="index.html">Home</a>
+		<a href="login.html">Login</a>
+
+		<h2>Produtos</h2>
+
+		<!-- para um tabela se iniciar é necessario usar as tags "tr(table row = linhas da tabela)", "td(table data = são as celulas da tabela)" e "th(table header = cabeçalho da tabela)" -->
+		<!-- dentro da tag "table" é possivel se utilizar de muitos atributos como o "border" -->
+
+		<table border="2" width="50%">
+			<tr>
+				<th>Codigo</th>
+				<th>Produto</th>
+				<th>Preço</th>
+				<th>Origem</th>
+			</tr>
+
+			<tr>
+				<td>
+					001
+				</td>
+				<td>
+					<a href="https://www.google.com/search?q=notebook&sxsrf=APq-WBv7oLDLEFO6rLUj2fEtSxiqYScC9Q:1647355012346&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjEqdHSq8j2AhXnrZUCHdM2B_sQ_AUoAXoECAEQAw&biw=1366&bih=617&dpr=1">Notebook</a>
+				</td>
+				<td>
+					R$ 2.500,00
+				</td>
+				<td>
+					<img src="imagens/pngwing.com.png" width="22" height="22">
+				</td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>
+					<a href="https://www.google.com/search?q=notebook&sxsrf=APq-WBv7oLDLEFO6rLUj2fEtSxiqYScC9Q:1647355012346&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjEqdHSq8j2AhXnrZUCHdM2B_sQ_AUoAXoECAEQAw&biw=1366&bih=617&dpr=1">Notebook</a>
+				</td>
+				<td>
+					R$ 6.200,00
+				</td>
+				<td>
+					<img src="imagens/pngwing.com.png" width="22" height="22">
+				</td>
+			</tr>
+			<tr>
+				<td>	
+					003
+				</td>
+				<td>
+					<a href="https://www.google.com/search?q=notebook&sxsrf=APq-WBv7oLDLEFO6rLUj2fEtSxiqYScC9Q:1647355012346&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjEqdHSq8j2AhXnrZUCHdM2B_sQ_AUoAXoECAEQAw&biw=1366&bih=617&dpr=1">Notebook</a>
+				</td>
+				<td>
+					R$ 4.300,00
+				</td>
+				<td>
+					<img src="imagens/pngwing.com.png" width="22" height="22">
+				</td>
+			</tr>
+			<tr>
+
+				<!-- atributos como o "colspan (define quantas colunas a celula "td" oculpa)","rowspan (define quantas linhas a celula "td" oculpa)" pordem alterar a tebela -->
+				
+				<td rowspan="2">
+					Desconto
+				</td>
+				<td colspan="3">
+					cumpom -5%
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					cumpom -8%
+				</td>
+			</tr>
+		</table>
+
+	</body>
+
+</html>
