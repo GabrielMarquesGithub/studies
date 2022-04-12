@@ -1,0 +1,20 @@
+
+/*MODELO DE CAIXA*/
+
+.con{
+	border: 1px solid red;
+
+	/*padding-top: 20px;
+	padding-left: 10px;
+	padding-bottom: 20px;*/
+	padding: 20px 50px;
+
+	margin-top: 100px;
+	width: 100px;
+
+	/*A mesma logica para o padding funciona no border e também no margin*/
+}
+#noticia{
+	background: mediumslateblue;
+	padding: 10px;
+}

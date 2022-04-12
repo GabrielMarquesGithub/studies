@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Elementos flutuantes</title>
+
+	<style type="text/css">
+		
+		.conteudo{
+			background: mediumslateblue;
+			border: 1px solid gray;
+			width: 200px;
+			height: 200px;
+			float: right;
+			margin-top: 20px;
+		}
+		/*
+		.conteudo1{
+			background: indianred;
+			border: 1px solid gray;
+			width: 200px;
+			height: 200px;
+			float: right;
+		}
+		*/
+		.clear{
+			clear: right;
+		}
+
+		#principal{
+			background: lightsteelblue;
+			width: 500px;
+			height: 500px;
+		}
+
+		#principal1{
+			background: lightsteelblue;
+		}
+
+		.conteudo-new{
+			background: mediumslateblue;
+			border: 1px solid gray;
+			width: 200px;
+			height: 200px;
+			float: left;
+			margin-top: 20px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<!-- Mesmo estando ambas as divs com background definidos, por serpem floats somente a com clear declaro tem background -->
+
+	<div id="principal1">
+
+		<div class="conteudo">
+			conteudo 1
+		</div>
+		<div class="conteudo">
+			conteudo 2
+		</div>
+		<div class="conteudo">
+			conteudo 3
+		</div>
+
+	</div>
+
+	<div id="principal">
+
+		<div class="conteudo-new">
+			conteudo 1
+		</div>
+		<div class="conteudo-new">
+			conteudo 2
+		</div>
+		<div class="conteudo-new">
+			conteudo 3
+		</div>
+
+
+		<div class="clear"></div>
+
+
+	</div>
+
+	<div class="clear">
+		<p>
+			Pellentesque iaculis consectetur metus, et vulputate tellus egestas ac. Nulla ullamcorper volutpat cursus. Nam condimentum id velit luctus rhoncus. Nam eu tortor porta, ullamcorper metus id, iaculis leo. In nec viverra massa. Donec vitae lorem laoreet, rutrum diam quis, condimentum purus. Etiam nunc risus, interdum non elit in, vehicula facilisis turpis.
+
+			Proin hendrerit tortor efficitur, tristique leo pharetra, fermentum odio. Nullam feugiat finibus ornare. Sed lacus orci, ornare at vehicula sit amet, fringilla a dolor. Aliquam ultricies eleifend est, feugiat sagittis neque imperdiet vel. Praesent egestas nisi sed justo pellentesque, ut elementum felis pellentesque. Sed id tellus feugiat, posuere diam blandit, varius libero. Pellentesque mollis ultrices nisl non vehicula. Sed vel orci nec enim ultrices pretium ut ac magna. Sed sit amet tempus eros. Duis condimentum consequat rhoncus. Sed tempor libero quis tempus ullamcorper.
+
+			Maecenas tempus vehicula nulla tempor convallis. Cras aliquam ligula quis vulputate varius. Ut luctus id neque at lacinia. Fusce nec massa condimentum, auctor sapien et, efficitur est. Sed molestie at magna ut vestibulum. Pellentesque pulvinar, lectus cursus porta ultrices, elit metus rhoncus leo, at lacinia leo risus eget sem. Nam non elementum nisl, a fringilla nunc. Nulla et vulputate diam. Suspendisse potenti. Praesent vitae magna eu tortor cursus malesuada. Duis at urna non purus sagittis vulputate et nec mauris. Curabitur fermentum hendrerit scelerisque. Morbi lobortis lectus non felis vulputate condimentum.
+		</p>
+	</div>
+
+</body>
+</html>
