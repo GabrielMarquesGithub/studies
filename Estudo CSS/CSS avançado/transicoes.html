@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transições</title>
+
+	<link rel="stylesheet" type="text/css" href="../Recursos/Recursos css/normalize.css">
+
+	<style type="text/css">
+
+		#caixa{
+			width: 300px;
+			height: 300px;
+			background: #b9c941;
+			padding: 10px;
+			margin: 0px auto;
+			box-shadow: 10px 10px 4px 6px rgba(0, 0, 0, 1.0);
+		}
+		#caixa:hover{
+			width: 400px;
+			height: 400px;
+			background: indianred;
+			padding: 20px;
+			margin: 0px auto;
+			box-shadow: 10px 10px 4px 6px rgba(0, 0, 0, 1.0);
+			/*transition: background 3s, width 3s, height 3s, padding 3s;*/
+			transition: all 3s;
+		}
+		h1{
+			padding: 10px;
+			background: rgba(0, 0, 0, 0.5);
+			text-shadow: 2px 2px 4px #b9c941;
+			color: white;
+		}
+		
+	</style>
+
+</head>
+<body>
+
+	<div id="caixa">
+		<h1>Titulo da caixa</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper sed orci vitae luctus. Vivamus sed sem non sapien ultricies volutpat. Nullam nec tortor sed nisl accumsan semper vulputate et dolor. Fusce vestibulum congue tellus, vitae placerat erat varius nec. Fusce bibendum sollicitudin vestibulum.</p>
+	</div>
+
+</body>
+</html>

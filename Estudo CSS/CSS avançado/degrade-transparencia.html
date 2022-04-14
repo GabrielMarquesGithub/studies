@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Degrade e transparencia</title>
+
+	<link rel="stylesheet" type="text/css" href="../Recursos/Recursos css/normalize.css">
+
+	<style type="text/css">
+		/* é possivel trabalhar o degrade de forma gradiente escolhendo o inicio dele por posição ou mesmo por graus e é possivel adicionar varias cores */
+		#caixa{
+			width: 300px;
+			height: 300px;
+			background: linear-gradient(140deg, #ccc, indianred, lightblue);
+			padding: 10px;
+			box-sizing: border-box;
+			margin-bottom: 30px;
+		}
+		/* é possivel trabalhar a opacidade de um objeto tanto com a propriedade "opacity" quanto com o uso do "rgba" onde a opacidade vai de 1 a 0 */
+		h1{
+			padding: 10px;
+			background: rgba(0, 0, 0, 0.5);
+		}
+		#caixa2{
+			width: 300px;
+			height: 300px;
+			background: radial-gradient(#ccc, indianred, blue);
+			padding: 10px;
+			box-sizing: border-box;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="caixa">
+		<h1>Titulo da caixa</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper sed orci vitae luctus. Vivamus sed sem non sapien ultricies volutpat. Nullam nec tortor sed nisl accumsan semper vulputate et dolor. Fusce vestibulum congue tellus, vitae placerat erat varius nec. Fusce bibendum sollicitudin vestibulum.</p>
+	</div>
+	<div id="caixa2">
+		<h1>Titulo da caixa</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper sed orci vitae luctus. Vivamus sed sem non sapien ultricies volutpat. Nullam nec tortor sed nisl accumsan semper vulputate et dolor. Fusce vestibulum congue tellus, vitae placerat erat varius nec. Fusce bibendum sollicitudin vestibulum.</p>
+	</div>
+
+</body>
+</html>

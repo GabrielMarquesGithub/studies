@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Estilizar Tabelas</title>
+
+	<style type="text/css">
+		
+		body{
+			font-family: "Trebuchet MS", helvetica, sans-serif;
+		}
+		table{
+			width: 600px;
+			border-collapse: collapse;
+			border: 1px solid black;
+		}
+		th{
+			background: grey;
+			height: 30px;
+			border-bottom: 1px solid black;
+			letter-spacing: 1px;
+			text-align: left;
+			padding: 15px;
+		}
+		td{
+			padding: 15px;	
+		}
+		tr{
+			background-color: #c4c4c4;
+		}
+		tr.alternando{
+			background-color: lightskyblue;
+		}
+		.numero{
+			text-align: right;
+		}
+		tr:hover{
+			background-color: indianred;
+		}
+	</style>
+
+</head>
+<body>
+
+	<table>
+		<tr>
+			<th>CÓDIGO</th>
+			<th>PRODUTO</th>
+			<th class="numero">PREÇO</th>
+		</tr>
+		<tr class="alternando">
+			<td>001</td>
+			<td>Notebook</td>
+			<td class="numero">R$ 2.500,00</td>
+		</tr>
+		<tr>
+			<td>002</td>
+			<td>Tablet</td>
+			<td class="numero">R$ 1.500,00</td>
+		<tr class="alternando">
+			<td>003</td>
+			<td>Iphone</td>
+			<td class="numero">R$ 3.500,00</td>
+		</tr>
+		<tr>
+			<td>004</td>
+			<td>Nexus</td>
+			<td class="numero">R$ 3.500,00</td>
+		</tr>
+	</table>
+
+</body>
+</html>

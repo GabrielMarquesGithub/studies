@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inputs html 5</title>
+
+	<link rel="stylesheet" type="text/css" href="../Recursos/Recursos css/normalize.css">
+
+	<style type="text/css">
+		#caixa{
+			width: 300px;
+			height: 300px;
+			background: #b9c941;
+			padding: 10px;
+			margin: 0px auto;
+			box-shadow: 10px 10px 4px 6px rgba(0, 0, 0, 1.0);
+		}
+		
+	</style>
+
+</head>
+<body>
+
+	<div id="caixa">
+		<form>		
+			<!-- nome -->
+			<label for="nome">Nome</label>
+			<input type="text" name="nome" id="nome" autofocus>
+			<br>
+			<!-- email -->
+			<label for="email">E-mail</label>
+			<input type="email" name="email" id="email" >
+			<br>
+			<!-- numero -->
+			<label for="number">Numero</label>
+			<input type="number" name="number" id="number" max="50" min="10" step="10">
+			<br>
+			<!-- url -->
+			<label for="url">Url</label>
+			<input type="url" name="url" id="url" placeholder="ex: http://www...">
+			<br>
+			<!-- pesquisa -->
+			<label for="search">Pesquisa</label>
+			<input type="search" name="search" id="search">
+			<br>
+			<!-- range -->
+			<label for="range">Range</label>
+			<input type="range" name="range" id="range" max="5" min="1" value="2">
+			<br>
+			<!-- data -->
+			<label for="date">Data</label>
+			<input type="date" name="date" id="date">
+			<br>
+			<!-- cor -->
+			<label for="color">Cor</label>
+			<input type="color" name="color" id="colore">
+			<br>
+
+
+
+			<br>
+			<input type="submit" name="Enviar">
+		</form>
+
+	<div>
+</body>
+</html>

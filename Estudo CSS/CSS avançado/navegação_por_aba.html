@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navegação por aba</title>
+
+	<style type="text/css">
+		
+		body{
+			font-family: sans-serif;
+		}
+		ul{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			width: 720px;
+		}
+		ul li{
+			float: left;
+			background: url('imagens/aba-direita.png') no-repeat top right;
+		}
+		li a{
+			display: block;
+			padding: 0 2em;
+			line-height: 3em;
+			text-decoration: none;
+			background: url('imagens/aba-esquerda.png') no-repeat top left;
+			color: white;
+		}
+		ul a:hover{
+			color: black;
+		}
+		ul #atual{
+			background: url('imagens/aba-direita-atual.png') no-repeat top right;
+		}
+		ul #atual a{
+			background: url('imagens/aba-esquerda-atual.png') no-repeat top left;
+		}
+
+	</style>
+
+</head>
+<body>
+	<h2>Lista de atividades</h2>
+	<ul>
+		<li id="atual"><a href="navegação_horizontal.html">Home</a></li>
+		<li><a href="sobre.html">Sobre</a></li>
+		<li><a href="servico.html">Serviços</a></li>
+		<li><a href="noticia.html">Nottícias</a></li>
+		<li><a href="contato.html">Contato</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Animações</title>
+
+	<link rel="stylesheet" type="text/css" href="../Recursos/Recursos css/normalize.css">
+
+	<style type="text/css">
+		/* neste exemplo keyframes recebe um background em “from” como estado inicial e o transforma em “to” para o estado desejado, nesse caso um background verde “#b9c941” é transformado no “indianred”, essa é apenas a “função” sendo necessária chamar ela no css para a realização da animação */
+		@keyframes animacao-caixa {
+			from{
+				background: #b9c941;
+				border-radius: 0px;
+			}
+			to{
+				background: indianred;
+				border-radius: 30px;
+			}
+		}
+		#caixa{
+			width: 300px;
+			height: 300px;
+			background: #b9c941;
+			padding: 10px;
+			margin: 0px auto;
+			box-shadow: 10px 10px 4px 6px rgba(0, 0, 0, 1.0);
+			/*animation-name: animacao-caixa; - nessa propriedade é chamada a animação neste caso com o nome “animacao-caixa” e ainda é necessário a declaração do tempo de duração dessa animação */
+			animation-name: animacao-caixa;
+			/* animation-duration: 5s; - essa propriedade declara o tempo de duração da animação em segundos, neste caso a animação dura 5 segundos */
+			animation-duration: 5s;
+			/* animation-delay: 3s; - essa propriedade tem a função de definir um delay no caso um tempo para a animação começa, neste caso a animação começaria 3 segundos após o carregamento do site */
+			animation-delay: 3s;
+			/* animation-iteration-count: 2; - essa propriedade define quantas vezes ocorre a animação por padrão a animação ocorre uma vez e depois volta ao estado normal, neste caso a animação aconteceria duas vezes pois o valor está em “2” */
+			animation-iteration-count: 4;
+			/* animation-direction: alternate; - essa propriedade tem como objetivo determinar a “direção” da animação com o valor “reverse” ela realiza a animação ao contrário começando no “to” para o “from”, já com o valor “alternate” ela realiza a animação normalmente e depois a animação reserva, vale salientar que a execução normal e reversa consome 1 “count” cada */
+			animation-direction: alternate;
+			/*
+			animation: animacao-caixa 5s 3s 4 alternate;
+			*/
+		}
+		h1{
+			padding: 10px;
+			background: rgba(0, 0, 0, 0.5);
+			text-shadow: 2px 2px 4px #b9c941;
+			color: white;
+		}
+		
+	</style>
+
+</head>
+<body>
+
+	<div id="caixa">
+		<h1>Titulo da caixa</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper sed orci vitae luctus. Vivamus sed sem non sapien ultricies volutpat. Nullam nec tortor sed nisl accumsan semper vulputate et dolor. Fusce vestibulum congue tellus, vitae placerat erat varius nec. Fusce bibendum sollicitudin vestibulum.</p>
+
+</body>
+</html>

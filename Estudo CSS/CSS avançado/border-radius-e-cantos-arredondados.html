@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Border radius e Cantos arredondados</title>
+
+	<link rel="stylesheet" type="text/css" href="../Recursos/Recursos css/normalize.css">
+
+	<style type="text/css">
+		#box{
+			padding: 50px;
+			width: 300px;
+			height: 300px;
+			background: lightskyblue;
+			margin: 10px auto;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+		}
+		/* a propriedade box-sizing com valor "border-box" é utilizada para evitar o acrescimo do padding ao tamanho original da caixa fanzendo evitando confusões em layouts, é necessario alguns prefixos para o utilização do border radius em alguns browsers antigos */
+		#box2{
+			padding: 50px;
+			width: 300px;
+			height: 300px;
+			background: lightskyblue;
+			margin: 10px auto;
+		}
+		#caixa{
+			width: 300px;
+			height: 300px;
+			background: #b9c941;
+			padding: 10px;
+			-webkit-border-radius: 10px 20px 40px 80px;
+			-moz-border-radius: 10px 20px 40px 80px;
+			border-radius: 10px 20px 40px 80px;
+			margin: 10px auto;
+		}
+		/* é possivel utilizar a propriedade de arredondamento como diversas outras, é necessario alguns prefixos para o utilização do border radius em alguns browsers antigos */
+		#caixa2{
+			width: 300px;
+			height: 300px;
+			background: #b9c941;
+			padding: 10px;
+			border-radius: 30px 180px;
+			margin: 10px auto;
+		}
+		img.img1 {
+			width: 300px;
+			margin: 10px auto;
+			display: block;
+			border-radius: 150px;
+		}
+		/* note que para arredondar perfeitamente é necessario que a imagem tenha a altura e largura iguais */
+		img.img2 {
+			width: 300px;
+			height: 300px;
+			margin: 10px auto;
+			display: block;
+			border-radius: 150px;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="box">
+		<h1>Titulo da caixa</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper sed orci vitae luctus.</p>
+	</div>
+	<div id="box2">
+		<h1>Titulo da caixa</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper sed orci vitae luctus.</p>
+	</div>
+	<div id="caixa">
+		<h1>Titulo da caixa</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper sed orci vitae luctus. Vivamus sed sem non sapien ultricies volutpat. Nullam nec tortor sed nisl accumsan semper vulputate et dolor. Fusce vestibulum congue tellus, vitae placerat erat varius nec. Fusce bibendum sollicitudin vestibulum.</p>
+	</div>
+	<div id="caixa2">
+		<h1>Titulo da caixa</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper sed orci vitae luctus. Vivamus sed sem non sapien ultricies volutpat.</p>
+	</div>
+
+	<img class="img1" src="imagens/perfil.jpg">
+	<img class="img2" src="imagens/perfil.jpg">
+
+</body>
+</html>

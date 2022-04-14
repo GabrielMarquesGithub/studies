@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Estilizar Forms</title>
+
+	<style type="text/css">
+		
+		body{
+			font-family: "Trebuchet MS", Helvetica, sans-serif;
+		}
+		fieldset{
+			padding: 1em;
+			border: 1px solid #c3c3c3;
+		}
+		legend{
+			font-weight: bold;
+		}
+		label{
+			display: block;
+			cursor: pointer;
+		}
+		input{
+			width: 20em;
+		}
+		/*
+		input [type="text"]{
+			width: 20em;
+		}
+		*/
+		input.radio, input.textarea, input.submit {
+			width: auto;
+		}
+		textarea{
+			width: 20em;
+			height: 10em;
+		}
+		.radio{
+			margin-right: 1em;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<h2>Estilizando Formularios</h2>
+	<form>
+		
+		<fieldset>
+			<legend>Detalhes de contato</legend>
+
+			<div>
+				<label for="nome">Nome:</label>
+				<input type="text" name="nome" id="nome">
+			</div>
+			<div>
+				<label for="email">E-mail:</label>
+				<input type="text" name="email" id="email">
+			</div>
+			<div>
+				<label for="url">URL:</label>
+				<input type="text" name="url" id="url">
+			</div>
+
+
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Comentarios</legend>
+			<div>
+				<label for="mensagem">Mensagem</label>
+				<textarea name="mensagem" id="Mensagem"></textarea>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Lembrar de mim</legend>
+			<div>
+				<label>
+				<input class="radio" type="radio" name="lembrar">Sim
+				</label>
+				<label>
+				<input class="radio" type="radio" name="lembrar">Não
+				</label>
+			</div>
+		</fieldset>
+
+	</form>
+
+</body>
+</html>
