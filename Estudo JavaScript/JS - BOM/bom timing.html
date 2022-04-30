@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    
+    <title>BOM timing</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+    <script>
+  
+        //basicamente seta um tempo para a realização de uma tarefa, o tempo sempre é em milissegundos neste caso após 2 segundos que a aplicação foi iniciada ela irá escrever 'teste1' na tela uma unica vez 
+        setTimeout(function() {document.write('teste1<br>')}, 2000)
+
+        //basicamente seta um intervalo de tempo para a realização de uma tarefa, o tempo sempre é em milissegundos neste caso após a aplicação ser iniciada ela irá escrever 'teste2' na tela a cada 20 segundos
+        setInterval(function() {document.write('teste2')}, 20000)
+
+
+        var x = 5
+
+        //neste exemplo a cada 3 segundos x perde uma unidade, como um cronometro, e quando a a variável x chega a zero a condição if é atendida permitindo a execução do recarregamento da pagina
+        setInterval(function() {
+        document.write('<br>'+x)
+        x--
+        if (x===0) {
+            //window.location.reload()    
+        }
+        }, 3000)
+
+        var y = 5
+
+        //neste caso quando a condição for atendida o o método clearInterval vai finalizar a execução repetida, é possível fazer o mesmo com timeout com o clearTimeout
+        var interval = setInterval(function() {
+        document.write('<br> clear interval '+y)
+        y--
+        if (y===0) {
+            clearInterval(interval)    
+        }
+        }, 3000)
+        
+    </script>
+</body>
+</html>

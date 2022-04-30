@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Escopo de variaveis</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+    <script>
+
+        //no javaScript a 3 escopos de variaveis sendo eles global, função e de bloco
+
+       var global = 10
+
+       if (global == '10') {
+           //uma variavel de escopo de bloco sofre elevação para o escopo que ela está inserida, tanto de função ou global
+           var bloco = 20
+           //neste caso a var bloco sofrera elevação para o escopo global
+       }
+
+       x()
+        
+        
+       function x() {
+           //como ambas as variaveis são de escopo global a função as reconhece
+        document.write('<br>Variavel escopo global: ' + global)
+        document.write('<br>Variavel escopo bloco elevado: ' + bloco)
+            //as variaveis dentro de uma função so tem escopo de função e não são 'reconhecidas' fora da função
+            var funcao = 30
+       }
+       
+       document.write(funcao)
+
+    </script>
+</body>
+</html>

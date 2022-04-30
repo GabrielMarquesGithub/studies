@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Manipulando estilos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body">
+    
+    <h3>Manipulando estilos</h3>
+
+    <input type="color" onmouseout="modifica2()" id="colore">
+
+    <button type="button" onclick="modifica('#FF0000')">Vermelho</button>
+    <button type="button" onclick="modifica('#00FF00')">Verde</button>
+    <button type="button" onclick="modifica('#0000FF')">Azul</button>
+
+    <div style="background: grey; width: 300px; height: 300px; margin-top: 20px; border: 1px solid black;" id="square"></div>
+
+    <script>
+        function modifica(corFundo) {
+            document.getElementById('square').style.background = corFundo
+        }
+        function modifica2() {
+         var cor = document.getElementById('colore').value
+            document.getElementById('square').style.background = cor
+        }
+    </script>
+</body>
+</html>

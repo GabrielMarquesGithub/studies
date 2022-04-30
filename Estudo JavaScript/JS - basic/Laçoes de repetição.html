@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Laços de repetição e encadeados</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+    <script>
+  
+        var frutas = Array()
+
+        frutas[0] = 'banana'
+        frutas[1] = 'abacate'
+        frutas[2] = 'laranja'
+        frutas[3] = 'uva'
+
+        var i = 0
+
+        while (i < frutas.length) {
+            document.write('<br>' + frutas[i])
+            i++
+        }
+
+        for (let num1 = 1; num1 <= 10; num1++) {
+            
+            document.write('<br><br> Tabuada do '+ num1 + '<br>')
+
+            for (let num2 = 1; num2 <= 10; num2++) {
+              
+                document.write(num1 + ' x ' + num2 + ' = ' + num1 * num2 + '<br>')
+                
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

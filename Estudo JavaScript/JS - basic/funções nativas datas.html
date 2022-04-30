@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Funções para datas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+    <script>
+  
+        //o objeto Date precisa ser instanciado 
+        var data = new Date()
+
+       //método getDate - ele pega o número do dia atual
+        document.write(data.getDate())
+
+        brLine()
+       //método getMonth - ele pega o número do més atual, porem ele conta os meses de 0 a 11 então é necessário somar + 1 para se adequar ao que estamos acostumados 
+       document.write(data.getMonth() + 1) 
+        
+        brLine()
+       //método getFullYear - ele pega o ano que estamos
+       document.write(data.getFullYear())
+
+        brLine()
+       //método getDate - ele pega o número do dia atual
+       document.write(data.getDate() + ' / ' + data.getMonth() + ' / ' + data.getFullYear())
+
+        brLine()
+        brLine()
+        brLine()
+       //usando o to String é possível transformar todas as informações da data em String
+       document.write(data.toString())
+
+        brLine()
+        brLine()
+        brLine()
+       //método setDate - tem a função de setar uma data neste caso, ele pegou a data recebida pelo get e adicionou + 1
+       data.setDate(data.getDate() + 1)
+       document.write(data.toString())
+
+        brLine()
+       //usando o método set é possível alterar os diversos tipos de data
+       data.setMonth(data.getMonth() + 1)
+       document.write(data.toString())
+
+        brLine()
+       //usando o método set é possível alterar os diversos tipos de data
+       data.setFullYear(data.getFullYear() + 1)
+       document.write(data.toString())
+
+        brLine()
+        brLine()
+        brLine()
+
+        //trabalhar calculo de datas ------------------------------------------------------------
+        //10/1/2002
+        var data1 = new Date(2002, 0, 10)
+
+        var data2 = new Date(2002, 6, 10)
+        //10/6/2002
+
+       document.write(data1.toString())
+
+       brLine()
+       document.write(data2.toString())
+
+       //converter datas para que possamos calcular
+       
+
+       brLine()
+       //O método getTime calcula os milissegundos de 1 de janeiro 1970 até a data indicada nno cada da 'data1' de 1970 até 10/1/2002, e com a data em números é possível calcular 
+       document.write(data1.getTime())
+
+       brLine()
+       document.write(data2.getTime())
+       
+       //agora com os milissegundos em mãos basta calcular a diferença entre a 'data1' e a 'data2' e posteriormente transformar em dias  
+
+       brLine()
+       //o método abs retorna o valor inteiro de um número 
+       var mili_entre = Math.abs(data1.getTime() - data2.getTime())
+       document.write(mili_entre) 
+
+       brLine() 
+       //para converter primeiro temos que saber a quantidade de milissegundos em 1 dia
+       var mili_dia = (1*24*60*60*1000)
+       document.write('Um dia tem '+mili_dia+' milissegundos')
+
+
+       brLine() 
+       //para converter primeiro temos que saber a quantidade de milissegundos em 1 dia
+       document.write('A diferença de dias entre '+data1+' e '+data2+' é de '+Math.ceil(mili_entre/mili_dia)+' dias')
+
+
+
+        function brLine() {
+            document.write('<br><br>')
+        }
+
+    </script>
+</body>
+</html>

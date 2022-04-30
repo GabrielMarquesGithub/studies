@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Manipulando classes</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .estilo1{
+            background-color: indianred;
+            color: aquamarine;
+            padding: 20px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        .estilo2{
+            background-color: aquamarine;
+            color: indianred;
+            padding: 20px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body">
+    
+    <h3>Manipulando classes</h3>
+
+    <div class="estilo1" id="square">Manipulando classes</div>
+
+    <button onclick="modifica()" type="button">Modificar class</button>
+
+    <script>
+        function modifica() {
+           if (document.getElementById('square').className == 'estilo1'){
+            document.getElementById('square').className = 'estilo2'
+           }
+           else{
+            document.getElementById('square').className = 'estilo1'
+           }
+        }
+    </script>
+</body>
+</html>

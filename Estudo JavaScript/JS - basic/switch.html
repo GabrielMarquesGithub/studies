@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Operadores logicos</title>
+
+	
+
+</head>
+<body>
+
+	
+	
+
+		
+	<script>
+
+        var caso = prompt('Qual caso voce deseja executar ?')
+
+        //O switch é como um operador identico, ele leva em conta o tipo da variavel.
+        switch (parseInt(caso)) {
+
+            case 1:
+                document.write('Caso 1')
+                //O break é necessario para finalizar a execução sem ele o codigo é executado de maneira gravitacional até todos os cases
+                break;
+            case 2:
+                document.write('Caso 2')
+                break;
+            case 3:
+                document.write('Caso 3')
+                break;
+            //O default não é obrigatorio, ele serve para quando o parametro recebido não é igual a nenhum dos casos ele será executado, sem ele simplesmente não ocorre nada    
+            default:
+                document.write('Caso default')
+                break;
+        }
+
+    </script>
+</body>
+</html>

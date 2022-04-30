@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Funções para manipular strings</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+    <script>
+  
+        var nome = ' Gabriel Marques Magalhães '
+
+       //propriedade length - "conta" o tamanho da string
+        document.write(nome.length)
+
+        brLine()
+       //método charAt - acha o caractere na casa indicada
+       document.write(nome.charAt(4)) 
+        
+        brLine()
+       //método indexOf - indica a casa onde o caractere indicado está, e pode ser inserido ao lado um numero referente a onde a busca deve começar, neste caso a partir da casa 10 ele procura a letra 'M'  
+       document.write(nome.indexOf('M', 10))
+
+       brLine()
+       //funciona como o indexOf porem a procura começa da ultima casa para a frente
+       document.write(nome.lastIndexOf('M'))
+
+        brLine()
+       //método replace - tem a função de substituir strings, neste caso trocou Gabriel por Nicolas 
+       document.write(nome.replace('Gabriel', 'Nicolas'))
+       brLine()
+       //método replace - se utilizando de operadores como '//' e a flag 'g' pode alterar todas incidências do caractere procurado neste caso todos os 'a' foram substituídos por '#'
+       document.write(nome.replace(/a/g, '#'))
+       
+        brLine()
+       //método substr - de recortar, neste caso a partir da posição zero ele recortou 7 caracteres a frente
+       document.write(nome.substr(0, 7))
+
+       brLine()
+       //método split serve para separar a string no caractere passado a ela, neste caso a string seria separada onde havia 'a', e cada parte irá ser parte de um array
+       //document.write(nome.split('a'))
+       //é possível também passar um valor que indicara a quantidade de vezes para limitar a ação neste caso ocorreria a penas duas divisões, e sobraria apenas essas duas partes, sendo as demais deletadas 
+       document.write(nome.split('a', 2))
+
+        brLine()
+       //método toLowerCase - deixa todos os caracteres minúsculos 
+       document.write(nome.toLowerCase())
+
+        brLine()
+       //método toUpperCase - deixa todos os caracteres maiúsculos 
+       document.write(nome.toUpperCase())
+
+        brLine()
+       //método trim - tira os espaços nas extremidades da strings 
+       document.write('-'+ nome.trim() +'-')
+
+       brLine()
+       //método endsWith - checa como a string termina
+       document.write(nome.endsWith('a'))
+
+       brLine()
+       ////método startsWith - checa como a string começa
+       document.write(nome.startsWith(' G'))
+
+
+
+        function brLine() {
+            document.write('<br>')
+        }
+
+    </script>
+</body>
+</html>

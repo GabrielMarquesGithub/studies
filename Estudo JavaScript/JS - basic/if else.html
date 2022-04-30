@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>If else e operadores lógicos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+   <script>
+
+       // com o operador igual uma variável string e uma number podem ser aceitas
+       var as = '7'
+       var bs = 7
+       if (as == bs) {
+       document.write('<br>Entrou dentro do bloco if')
+       }
+       else {
+       document.write('<br>Não entrou dentro do bloco if então agora é else')
+       }
+
+       // com o operador idêntico uma variável string e uma number não são aceitas pois são de tipos diferentes mesmo com o 'valor' igual
+       var as = "7"
+       var bs = 7
+       if (as === bs){
+       document.write('<br>Entrou dentro do bloco if')
+       }
+       else if (as == bs){
+       document.write('<br>Não entrou dentro do bloco if então agora é else if')
+       }
+       else{
+       document.write('<br>Não entrou dentro do bloco if nem else if agora é só else')
+       }
+   </script> 
+</body>
+</html>

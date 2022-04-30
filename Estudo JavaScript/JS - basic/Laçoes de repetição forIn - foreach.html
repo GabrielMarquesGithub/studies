@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Laços de repetição forIn e forEach</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+    <script>
+  
+        var frutas = Array()
+
+        frutas['zebra'] = 'banana'
+        frutas[1] = 'abacate'
+        frutas['e'] = 'laranja'
+        frutas[-12] = 'uva'
+
+        //Ele percorre todo array e para quando recebe undefined como valor, o for in não é muito utilizado porem ele tem a funcionalidade de percorrer um array que não tem um padrão de índice 
+        for (var num in frutas) {
+            
+            document.write('<br>Posição '+ num +' do elemento: '+ frutas[num])
+            
+        }
+
+        var pessoas = Array()
+
+        pessoas[0] = 'Carlos'
+        pessoas[1] = 'José'
+        pessoas[2] = 'paulo'
+        pessoas[3] = 'Ana'
+
+            <document.write('<br><br>')
+
+        //o foreach no JS é uma função, que atua como um laço de repetição, recebe como parâmetro outra função callback com 3 variáveis, a assim a função foreach dará valores as variaveis, sendo a primeira o valor do array a segunda o índice onde o valor se encontra e a quarta o próprio array   
+        
+        //não é obrigatório o uso de 3 variaveis, pode-se usar somente as necessárias 
+        
+        //é possível também a utilização de uma função encapsulada dentro de uma variável var via = function(valor, indice, array)
+
+        //o foreach também só atua com indices numéricos, onde indices de strings por exemplo ele ignoraria  
+        pessoas.forEach(function(valor, indice, array){
+            document.write('<br>Posição '+ indice +' do elemento: '+ valor)
+
+            //formas de se utilizar o as variáveis
+            if (valor == 'José') {
+                array[indice] = 'Um novo valor'
+                document.write('<br>'+ array[indice])
+            }
+        })
+
+    </script>
+</body>
+</html>

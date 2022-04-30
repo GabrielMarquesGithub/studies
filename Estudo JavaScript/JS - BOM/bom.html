@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    
+    <title>BOM em javaScript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+    <button onclick="abrirPopUp()">Interagir Janela</button>
+
+
+    <!-- criar um print da dela atual para impressão -->
+    <button onclick="window.print()">Imprimir tela</button> 
+
+    <script>
+  
+        var x = 0
+        var Janela = null
+
+        function abrirPopUp() {
+            
+            if (x == 0) {
+                //o método open tem a função de criar janelas, recendo como parâmetro o endereço, o nome, e posteriormente os informações sobre o tamanho. 
+                janela = window.open('https://www.google.com.br', 'new_window', 'width=200px', 'height=100px')
+                console.log('abri')
+                x++
+            }
+            else{
+                //O método close é nativo de objetos janelas, tem a função de fechar janelas criadas com o 'open'
+                janela.close()
+                console.log('fechei')
+                x--
+            }
+        }
+
+    </script>
+</body>
+</html>

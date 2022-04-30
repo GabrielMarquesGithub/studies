@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Ordenando arrays</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+   <script>
+
+        var frutas = []
+ 
+        frutas[1] = 'morango'
+        frutas[2] = 'maça'
+        frutas[3] = 'banana'
+        frutas[4] = 'uva'
+
+        //a função nativa sort ordena alfa-numericamente os arrays 
+        document.write(frutas.sort())
+
+        var num = []
+ 
+        num[1] = 56
+        num[2] = 4
+        num[3] = 52
+        num[4] = 2
+        num[5] = 73
+        num[6] = 1
+        num[7] = 31
+        num[8] = 3
+        num[9] = 13
+        num[10] = 9
+        num[11] = 7
+        num[12] = 12
+        num[13] = 62
+        num[14] = 73
+
+        //a função nativa sort ordena de forma incorreta números baseando-se apenas no primeiro número, com isso torna-se necessário a utilização de uma função para corrigir   
+        document.write(num.sort(ordenaNumeros))
+
+        // função padrão para correção de ordenação numérica do sort
+        function ordenaNumeros(a, b) {
+            return a - b
+        }
+
+        console.log(num)
+
+   </script> 
+</body>
+</html>

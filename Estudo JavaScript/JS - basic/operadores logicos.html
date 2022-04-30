@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Operadores logicos</title>
+
+	
+
+</head>
+<body>
+
+	
+	
+
+		
+	<script>
+
+        var presen = prompt('Quantidade de presença do aluno?')
+        var nota = prompt('Qual é a nota do aluno?')
+
+        // operador E, todas as condições devem ser true se não a condição recebe false
+        if (nota > 6 && presen > 69) {
+            document.write('<br>aprovado')
+        }
+        else{
+            document.write('<br>reprovado')
+        }
+
+        // operador OU, se uma espressão for true a condição recebe true  
+        if (nota > 6 || presen > 69) {
+            document.write('<br>passou em pelo menos um requisito')
+        }
+        else{
+            document.write('<br>não compriu nenhum requisito')
+        }
+
+        // operador de negação, ele retorna o valor contrario ao real, ou seja se for true ele retorna false e vice-versa
+        if (!(nota < -1)) {
+            document.write('<br>verdadeiro')
+        }
+        else{
+            document.write('<br>falso')
+        }
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Tratamento de erro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+    <script>
+  
+        var video = Array()
+
+        video[1] = Array()
+        video[1]['nome'] = 'Death note'
+        video[1]['categoria'] = 'Anime'
+
+        function getVideo(video) {
+            
+            //O try tem como função guardar linhas de códigos sujeitas a erros e apo´s isso tomar alguma ação
+            try{
+                console.log(video[0]['nome'])
+            }
+            //recebe o erro como parâmetro para o tratar
+            catch(e){
+                registrarErro(e)
+                console.log('Agora podemos tratar esse erro')
+
+                //O throw vai em contra mão a aplicações reativas, ele tem a função de criar uma exceção já prevendo o error e tomar uma ação personalizada para relatar o error, neste caso mandando uma mensagem no console
+                throw new Error('Houve um erro estamos trabalhando nisso')
+            }
+            //finaliza o tratamento do erro
+            finally{
+                console.log('sempre passa por aqui')
+            }
+        }
+
+        getVideo(video)
+
+
+        function registrarErro(erro) {
+            console.log('erro registrado no BD')
+        }
+
+    </script>
+</body>
+</html>

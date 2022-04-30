@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    
+    <title>BOM tamanhos de screen</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+    <script>
+  
+        //as propriedades avail de screen retornam as medidas de telas util dentro do navegador
+        var a = window.screen.availHeight
+        var l = window.screen.availWidth
+
+        console.log(a + ' ' + l)
+
+        //as propriedades normais de screen retornam as medidas totais da tela
+        var at = window.screen.height
+        var lt = window.screen.width
+
+        console.log(at + ' ' + lt)
+
+        //com as informações coletadas é possível setar comandos específicos  
+        if (l < 600) {
+            document.write('Exibição para mobile')
+        }
+        else{
+            document.write('Exibição para web')
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Pesquisa em Arrays</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+   <script>
+
+        var coisas = []
+        
+        coisas['frutas'] = [] 
+        coisas['pessoas'] = []
+ 
+        coisas['frutas'][1] = 'banana'
+        coisas['frutas'][2] = 'maça'
+        coisas['frutas'][3] = 'morango'
+        coisas['frutas'][4] = 'uva'
+
+        coisas['pessoas']['a'] = 'Ana'
+        coisas['pessoas']['b'] = 'Carlos'
+        coisas['pessoas']['c'] = 'João'
+
+        //a pesquisa se utiliza do indexOf, ele retorna a índice onde o valor passado está, e se não houver o valor passado no array, ele retorna -1 
+
+        //O indexOf retornara 4 que é o índice de uva no array
+        document.write(coisas['frutas'].indexOf('uva'))
+
+        //O indexOf retornara -1 pois n a carro no array fruta
+        document.write(coisas['frutas'].indexOf('carro'))
+
+        console.log(coisas)
+
+   </script> 
+</body>
+</html>

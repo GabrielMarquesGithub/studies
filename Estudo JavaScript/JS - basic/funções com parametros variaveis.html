@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Funções com parâmetros variaveis</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+    <script>
+  
+        function soma() {
+            var result = 0
+
+            //soma usando o objeto arguments de forma dinâmica, se passado uma string como valor neste caso ela será concatenada ao resultado numérico   
+            for (var i in arguments) {
+              result += arguments[i]  
+            }
+
+            return result
+
+            //arguments é um palavra reservada que retorna todas as variaveis passadas para a função
+            console.log(arguments)
+        }
+
+        //chamando função
+        console.log(soma(7, 5, 6, 6, 2))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Casting de tipos de variáveis</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+    <script>
+
+       var a = prompt('Digite um número')
+       var b = prompt('Digite um número')
+
+       //Não é possível por exemplo somar strings elas serão concatenadas exemplo
+       document.write(a + b, '<br>')
+
+        //A diferença entre parseInt e parseFloat é que o parseFloat mantém a fração
+        //a = parseInt(a)
+        //b = parseFloat(b)
+        //já convertendo o tipo com o Number não ah distinção entra int e float, ele recebera exatamente o numero passado
+        a = Number(a)
+        b = Number(b)
+
+        document.write(a + b, '<br>')
+
+        //O toString é usado de maneira diferente
+        document.write(a.toString() + b.toString())
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Atividade de arrays</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+    <input type="text" id="inputAdd" placeholder="Adicione uma palavra a lista"> <button onclick="addObjeto()">Adicionar</button> <button onclick="ordObjeto()">Ordenar</button>
+
+
+   <script>
+
+    var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+    function addObjeto () {
+    
+        var valorAtual = document.getElementById('inputAdd').value
+        var indAtual = objetos.indexOf(valorAtual)
+
+      if (valorAtual != '' && indAtual === -1) {
+
+        objetos.push(valorAtual)
+
+        console.log(objetos)
+    }
+    else{
+        if (valorAtual == '') {
+            alert('Campo de preenchimento vazio')
+        }
+        else {
+            alert('Esse objeto já foi adicionado a lista')
+        }
+    }
+    document.getElementById('inputAdd').value = ''
+}
+
+    function ordObjeto () {
+        objetos.sort()
+        console.log(objetos)
+    }
+
+
+
+
+        
+
+   </script> 
+</body>
+</html>

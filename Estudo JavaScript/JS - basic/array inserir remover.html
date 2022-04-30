@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>inserir remover de Arrays</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+   <script>
+
+        var coisas = []
+        
+        coisas['frutas'] = [] 
+        coisas['pessoas'] = []
+ 
+        coisas['frutas'][1] = 'banana'
+        coisas['frutas'][2] = 'maça'
+        coisas['frutas'][3] = 'morango'
+        coisas['frutas'][4] = 'uva'
+
+        coisas['pessoas'][0] = 'Ana'
+        coisas['pessoas'][1] = 'Carlos'
+        coisas['pessoas'][2] = 'João'
+        coisas['pessoas'][3] = 'Maria'
+
+        //incluir elementos no final do array
+        coisas.push('animais')
+        coisas['frutas'].push('acerola')
+        coisas['animais'] = []
+        coisas['animais'].push('leão')
+
+        //incluir elementos no incio do array
+        coisas['frutas'].unshift('maracujá')
+        coisas['frutas'].unshift('mamão')
+
+        //-------------------------- exclusão de elementos na ponta --------------------------
+
+        //excluir elementos no final do array
+        coisas['frutas'].pop()
+
+        //excluir elementos no incio do array
+        coisas['frutas'].shift()
+
+        //o delete tem a função de apagar um elemento do array sem mover os outros indices, neste caso ele apagaria não so o valor como todo o índice 3
+        delete coisas['frutas'][3]
+
+
+
+        console.log(coisas)
+
+        //usando o slice é possível selecionar indices para exibir do array neste caso será exibido todo o array menos po ultimo índice 
+        console.log(coisas['pessoas'].slice(0, -1))
+
+   </script> 
+</body>
+</html>
