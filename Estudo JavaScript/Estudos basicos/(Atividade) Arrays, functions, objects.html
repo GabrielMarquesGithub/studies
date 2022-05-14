@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercícios arrays, functions, objects</title>
+</head>
+<body>
+  
+  <form action="" method="get">
+    <p>Nome: <input type="text" class="nome"></p>
+    <p>Sobrenome: <input type="text" class="sobrenome"></p>
+    <p>idade: <input type="text" class="idade"></p>
+    <p>Altura: <input type="text" class="altura"></p>
+    <p>Peso: <input type="text" class="peso"></p>
+    <button>Enviar</button>
+  </form>
+
+    <div class="resultado"></div>
+
+  <script>
+  //para evitar problemas de escopo e conflito de variaveis, é indicado criar uma função onde estará sue código javaScript, permitindo assim um controle do escopo 
+  function meuEscopo() {
+      //o quarry selector é o modo moderno para a seleção de elementos, onde se seleciona um elemento da arvore DOM como no CSS por 'tag', 'classe', 'id', etc tornando tudo mias fácil 
+      const form = document.querySelector('form')
+
+      const resultado = document.querySelector('.resultado')
+
+      const pessoas = []
+
+
+      /*
+      //é possível capturar eventos de elementos diretamente no javaScrip, neste caso o evento serio o submit no form, que executaria uma função anonima...
+      form.onsubmit = function (evento) {
+        //o método 'preventDefault()' tem como objetivo impedir ocorrências padrões neste caso ele impede que o navegador seja atualizado quando o submit é executado...
+        evento.preventDefault()
+      }*/
+
+      function recebeEventoForm(evento) {
+        //impedir atualização da pagina
+        evento.preventDefault()
+
+        //não é necessário pagar o valor agora, pode-se atrelar a variável ao todo do elemento e quando necessário usar o .value na exibição ou quando for trabalhar com os valores 
+
+        nome = form.querySelector('.nome'),
+        sobrenome = form.querySelector('.sobrenome'),
+        idade = form.querySelector('.idade'),
+        altura = form.querySelector('.altura'),
+        peso = form.querySelector('.peso')
+
+        pessoas.push({
+        nome: nome.value,
+        sobrenome: sobrenome.value,
+        idade: idade.value,
+        altura: altura.value,
+        peso: peso.value
+        })
+
+        console.log(pessoas)
+
+        resultado.innerHTML += `<h3>${nome.value} ${sobrenome.value} tem ${idade.value} anos, ${altura.value}m de altura e pesa ${peso.value}kg</h3>`
+      }
+
+      //atualmente a uma maneira mais moderna de atuar sobre eventos com o método 'addEventListener', basicamente é adicionado um 'escutador' de eventos no formulário que recebe o evento a ser analisado como argumento, diferentemente do comum ao usar o Listener o evento a ser citado não recebe o prefixo 'on' de 'onsubmit', pode per passado como argumento um função anonima ou chamar uma função   
+      form.addEventListener('submit', recebeEventoForm) 
+  }
+  meuEscopo()
+  </script>
+</body>
+</html>
